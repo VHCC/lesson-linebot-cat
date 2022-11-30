@@ -1,6 +1,7 @@
 {
-  "name": "linbotnodejs",
-  "version": "0.0.0",
+  "name": "linbot-cat-nodejs",
+  "version": "1.0.0",
+  "author": "Ichen.chu<r99521320@gmail.com>",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"

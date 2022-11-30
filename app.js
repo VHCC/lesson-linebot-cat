@@ -51,9 +51,9 @@ app.use(function(err, req, res, next) {
 
 // 用於辨識Line Channel的資訊
 var bot = linebot({
-  channelId: '***',
-  channelSecret: '***',
-  channelAccessToken: '***/ezRu/syfcAzu64uhWgdwSbqG8zJXkjdQqelAvAVNQi7OcwUQDkjJ3RI8oCLLXqtgSzW6TgTJH/ePfKobmMuecEj3pQgHyJ0fwiuJzKnKPuB4dv9jAFX/gdB04t89/1O/w1cDnyilFU='
+  channelId: '1542262923',
+  channelSecret: '948ae2b5c686b6f06f381010f1321f8c',
+  channelAccessToken: '91rCJ6zpvYhZW5PuJEMBcAEIUVueCbIb/ezRu/syfcAzu64uhWgdwSbqG8zJXkjdQqelAvAVNQi7OcwUQDkjJ3RI8oCLLXqtgSzW6TgTJH/ePfKobmMuecEj3pQgHyJ0fwiuJzKnKPuB4dv9jAFX/gdB04t89/1O/w1cDnyilFU='
 });
 
 
@@ -130,6 +130,7 @@ function handleText(message, replyToken, source, event) {
       var ly = jsonData[i];
       var msg = textTemp(i +': ' + ly);
 
+      console.log(msg);
       return event.reply(msg);
 
       // event.message.text是使用者傳給bot的訊息
@@ -147,9 +148,9 @@ function getRandomInt(max) {
 }
 
 // listen on port
-const port = process.env.PORT || 6677;
-// app.listen(port, () => {
-//   console.log(`listening on ${port}`);
-// });
+const port = process.env.PORT || 6678;
+app.listen(port, () => {
+  console.log(`listening on ${port}`);
+});
 
 module.exports = app;
